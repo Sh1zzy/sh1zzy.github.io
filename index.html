@@ -171,7 +171,12 @@
 <script>
     function form_submitted(){
         analytics.track(
-            "Signed Up"
+            "Signed Up",{
+                user:{
+                    name:'shiz test'
+                },
+                method:'web'
+            }
         )
     }
 
