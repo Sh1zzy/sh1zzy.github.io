@@ -133,7 +133,7 @@
       <h3>Dan Star</h3>
       <p class="w3-opacity">Architect</p>
       <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="contact()">Contact</button></p>
     </div>
   </div>
 
@@ -146,7 +146,7 @@
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit" onclick="form_submitted()">
+      <button class="w3-button w3-black w3-section" onclick="form_submitted()">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
     </form>
@@ -172,6 +172,14 @@
     function form_submitted(){
         analytics.track(
             "Signed Up"
+        )
+    }
+
+    function contact(){
+        analytics.track(
+            "Contact Expert",{
+                name:'test user'
+            }
         )
     }
 </script>
